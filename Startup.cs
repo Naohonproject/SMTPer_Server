@@ -64,7 +64,6 @@ namespace mailer
                         using (StreamReader stream = new StreamReader(context.Request.Body))
                         {
                             body = await stream.ReadToEndAsync();
-                            Console.WriteLine(body);
                         }
                         if (body == "")
                         {

@@ -30,9 +30,9 @@ namespace MailUtils
 
             using var smtpClient = new SmtpClient(_host);
             smtpClient.Port = _port;
-            smtpClient.Timeout = 200;
             smtpClient.EnableSsl = _isUseSecure;
             smtpClient.Credentials = new NetworkCredential(_email, _password);
+            smtpClient.Timeout = 20000;
 
             try
             {
